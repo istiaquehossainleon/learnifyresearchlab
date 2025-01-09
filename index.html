@@ -10,7 +10,80 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <style>
+        /* Add hover effect for navbar links */
+        .navbar-nav .nav-link {
+            position: relative;
+            color: #000; /* Default text color */
+            text-decoration: none;
+        }
+      
+        .navbar-nav .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -3px; /* Position the underline just below the text */
+            left: 0;
+            width: 100%;
+            height: 2px; /* Thickness of the underline */
+            background-color: #09303e; /* Customize the underline color */
+            transition: width 0.3s ease; /* Smooth animation */
+        }
+      
+        .navbar-nav .nav-link:hover {
+            color: #61808f; /* Optional: Change text color on hover */
+        }
+      
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #09303e; /* Underline color */
+            transition: width 0.3s ease; /* Animation for underline */
+        }
+      </style>
+      
+      <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html#hero">
+            <img src="./assets/images/Learnify Research Lab X.png" width="200px" height="50px" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#hero">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./publishedWorks.html">Published Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Research Units</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Members</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./policies.html">Policies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./internship.html">Internship</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
           <a class="navbar-brand" href="./index.html#hero">
             <img src="./assets/images/Learnify Research Lab X.png" width="200px" height="50px" alt="">
@@ -29,12 +102,15 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/publishedWorks.html">Published Works</a>
-              </li>
+              </li> -->
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#projects">Projects</a>
               </li> -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#services">Research Units</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Members</a>
               </li>
                 <li class="nav-item">
                 <a class="nav-link" href="./policies.html">Policies</a>
@@ -42,18 +118,181 @@
               <li class="nav-item">
                 <a class="nav-link" href="./internship.html">Internship</a>
               </li>
-         <!--  <li class="nav-item">
+          <li class="nav-item">
                 <a class="nav-link" href="#educationalPrograms">Programs</a>
               </li> -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> --> 
     <!--HERO-->
-    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center" style="position: relative;">
+        <div class="container">
+            <div class="row page page-1 active">
+                <div class="col-12">
+                    <h3 id="text1" style="color: #e4dcd3;" class="text-secondary text-uppercase fw-semibold display-5 animated-text">Greetings and welcome to</h3>
+                    <h1 id="text2" 
+                    style="color: #0f3946; 
+                    text-shadow: 0 0 10px #1b3b5f, 0 0 20px #0f3946, 0 0 30px #0f3946; 
+                    -webkit-text-stroke: 2px white;"
+                        class="text-uppercase fw-semibold display-1 animated-text">
+                        Learnify Research Lab
+                    </h1>
+                    <h1 id="text3" style="color: #e4dcd3;" class="text-secondary text-uppercase fw-semibold display-6 animated-text">Discovering Tomorrow's Knowledge Today</h1>
+                    <br>
+                    <div>
+                        <a href="#about" style="color: #e4dcd3;" class="btn btn-custom me-2">About Us</a>
+                        <a href="publishedWorks.html" style="color: #e4dcd3;" class="btn btn-custom-light me-2">Published Works</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row page page-2">
+                <div class="col-12">
+                    <h3 id="text1" style="color: #e4dcd3;" class="text-secondary text-uppercase fw-semibold display-5">Empowering Collaborative Learning</h3>
+                    <h1 id="text2" 
+                        style="color: #6b6d79; 
+                               text-shadow: 0 0 10px #6b6d79, 0 0 20px #6b6d79, 0 0 30px #6b6d79; 
+                               -webkit-text-stroke: 2px white;" 
+                        class="text-uppercase fw-semibold display-1">
+                        Innovation Hub
+                    </h1>
+                    <h1 id="text3" 
+    style="color: #e4dcd3;" 
+    class="text-uppercase fw-semibold display-6">
+    Learn, Research, Lead
+</h1>
+                    <br>
+                    <div>
+                        <a href="#about" style="color: #e4dcd3;" class="btn btn-custom me-2">About Us</a>
+                        <a href="publishedWorks.html"  style="color: #e4dcd3;" class="btn btn-custom-light me-2">Published Works</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row page page-3">
+                <div class="col-12">
+                    <h3 id="text1" style="color: #e4dcd3;" class="text-secondary text-uppercase fw-semibold display-5">Join Us Today</h3>
+                    <h1 id="text2" 
+                        style="color: #807f8c; 
+                               text-shadow: 0 0 10px #807f8c, 0 0 20px #807f8c, 0 0 30px #807f8c; 
+                               -webkit-text-stroke: 2px #e4dcd3;" 
+                        class="text-uppercase fw-semibold display-1">
+                        Your Future Awaits
+                    </h1>
+                    <h1 id="text3" class="text-secondary text-uppercase fw-semibold display-6">Step Into Innovation</h1>
+                    <br>
+                    <div>
+                        <a href="#about" class="btn btn-custom me-2">About Us</a>
+                        <a href="publishedWorks.html" class="btn btn-custom-light me-2">Published Works</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        /* Global Section Style */
+        #hero {
+            background-color: #f7f9fc; /* Light blue background */
+            transition: background-color 2s ease;
+        }
+    
+        /* Text Animation */
+        .animated-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInText 2s ease-in-out forwards;
+        }
+    
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Page Transitions */
+        .page {
+            display: none; /* Hide by default */
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+    
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+    
+        /* Button Styles (Consistent Across Pages) */
+        .btn-custom {
+            background-color: #e0a800; /* Warm yellow for consistency */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+    
+        .btn-custom:hover {
+            background-color: #d69600; /* Slightly darker yellow */
+            color: #555555;
+            border-color: lightskyblue;
+        }
+    
+        .btn-custom-light {
+            background-color: rgb(16, 124, 103);
+            color: white; /* Neutral gray for contrast */
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid lightskyblue;
+        }
+    
+        .btn-custom-light:hover {
+            background-color: gray;
+            color: lightskyblue; /* Slightly darker gray */
+            border-color: lightseagreen;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const pages = document.querySelectorAll('.page');
+            let currentPage = 0;
+    
+            // Function to cycle through pages
+            function showNextPage() {
+                pages[currentPage].classList.remove('active'); // Hide current page
+                currentPage = (currentPage + 1) % pages.length; // Move to the next page
+                pages[currentPage].classList.add('active'); // Show next page
+            }
+    
+            // Initially display the first page
+            pages[0].classList.add('active');
+    
+            // Set interval to switch pages every 5 seconds
+            setInterval(showNextPage, 5000);
+        };
+    </script>
+            
+            
+    
+    
+    
+    
+    
+
+
+
+    <!-- <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -68,7 +307,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--ABOUT-->
     <section id="about" class="section-padding">
         <div class="container">
@@ -82,25 +321,25 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row box-container">
                 <div class="col-lg-6">
                     <img src="./assets/images/Learnify Research Lab X.png" alt="">
                 </div>
                 <div class="col-lg-5">
-                    <!--<h1>Learnify Research Lab</h1>-->
                     <p class="mt-3 mb-4">Welcome to our cutting-edge research lab, an exclusively virtual entity transcending geographical boundaries. Our primary mission is to establish a decentralized research hub accessible to individuals worldwide. Committed to spearheading groundbreaking research, our focus lies on pioneering endeavors that promise to shape the future and leave an indelible impact. We are dedicated to fostering a global community of volunteers, interns, and trainees, providing invaluable opportunities for collaborative learning and skill development. Join us on this transformative journey as we redefine the landscape of impactful research.</p>
-                    <!--<div class="d-flex pt-4 mb-3">
-                        <div class="iconbox me-4">
-                            <i class="ri-mail-send-line"></i>
-                        </div>
-                        <div>
-                            <h5>WE are awesome</h5>
-                            <p>Random text</p>
-                        </div>
-                    </div>-->
                 </div>
             </div>
-        </div>
+            <style>
+                .box-container {
+                    border: 2px solid #355a69; /* Box border color */
+                    padding: 20px;            /* Spacing inside the box */
+                    border-radius: 10px;      /* Rounded corners */
+                    background-color: #f9f9f9; /* Light background for contrast */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                    margin: 20px 0;          /* Spacing outside the box */
+                }
+            </style>
+                        
     </section>
     <!--RESEARCHUNITS-->
     <section id="services" class="section-padding border-top">
@@ -177,6 +416,15 @@
     <!--POLICIES-->
     
     <!--BOARDMEMBERS-->
+    <style>
+        .team-member img {
+            width: 150px; /* Adjust the width as needed */
+            height: 150px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+            border-radius: 50%; /* Optional: Makes the image circular */
+        }
+    </style>
+    
     <section id="team">
         <div class="container">
             <div class="row">
@@ -187,14 +435,47 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-4 text-center ">
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <!-- Founder Section -->
+            <div class="row g-4 text-center">
+                <div class="col-md-12" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/Sharia Arfin Tanim.JPG" alt="">
+                            <h4>Sharia Arfin Tanim</h4>
+                            <p class="mb-0">Founder</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+    <!-- <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Members</h1>
+                        <p>Guiding Visionaries, Shaping Success: Our Board, Your Future</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center "> -->
+                <!-- <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
                     <div class="team-member image-zoom">
                         <div class="image-zoom-wrapper">
 
                                 <img src="./assets/images/Sharia Arfin Tanim.JPG" alt="">
                                 <h4 >Sharia Arfin Tanim</h4>
                                 <p class="mb-0">Founder</p>
+
+                        </div>
+                    </div>
+                </div> --> 
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Al Rafi Aurnob.jpg" alt="">
+                                <h4 >Al Rafi Aurnob</h4>
+                                <p class="mb-0">Lead Researcher</p>
 
                         </div>
                     </div>
@@ -214,17 +495,6 @@
                     <div class="team-member image-zoom">
                         <div class="image-zoom-wrapper">
 
-                                <img src="./assets/images/Al Rafi Aurnob.jpg" alt="">
-                                <h4 >Al Rafi Aurnob</h4>
-                                <p class="mb-0">Researcher</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-
                                 <img src="./assets/images/Sarzila Sahrin Jisha.jpg" alt="">
                                 <h4 >Sarzila Sahrin Jisha</h4>
                                 <p class="mb-0">Research Assistant</p>
@@ -232,14 +502,24 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
                     <div class="team-member image-zoom">
                         <div class="image-zoom-wrapper">
 
-                                <img src="./assets/images/Shahriar Mushficul Islam.jpg" alt="">
-                                <h4 >Shahriar Mushficul Islam</h4>
-                                <p class="mb-0">Administrator</p>
+                                <img src="./assets/images/Rokon.jpg" alt="">
+                                <h4 >MD Rokon Islam Emon</h4>
+                                <p class="mb-0">Research Assistant</p>
 
+                        </div>
+                     </div>
+                </div> 
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Rubaba.jpg" alt="">
+                                <h4 >Rubaba Rahman</h4>
+                                <p class="mb-0">Research Assistant</p>
                         </div>
                     </div>
                 </div> 
@@ -247,13 +527,47 @@
                     <div class="team-member image-zoom">
                         <div class="image-zoom-wrapper">
 
-                                <img src="./assets/images/Shahriar Siddique Ayon.jpg" alt="">
-                                <h4 >Shahriar Siddique Ayon</h4>
+                                <img src="./assets/images/Tahmid.jpg" alt="">
+                                <h4 >Tahmid Enam Shrestha </h4>
                                 <p class="mb-0">Research Assistant</p>
 
                         </div>
-                    </div>
-                </div> -->
+                     </div>
+                </div> 
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Tapu.jpg" alt="">
+                                <h4 >Tapu Biswas </h4>
+                                <p class="mb-0">Research Assistant</p>
+
+                        </div>
+                     </div>
+                </div> 
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Sumit.jpg" alt="">
+                                <h4 >Sumit Kanti Sarker</h4>
+                                <p class="mb-0">Research Assistant</p>
+
+                        </div>
+                     </div>
+                </div> 
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Imdad.jpg" alt="">
+                                <h4 >Gazi Mohammad Imdadul Alam </h4>
+                                <p class="mb-0">Research Assistant</p>
+
+                        </div>
+                     </div>
+                </div> 
+                <hr class="thin-line">
                 <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
                     <div class="team-member image-zoom">
                         <div class="image-zoom-wrapper">
@@ -270,14 +584,59 @@
                         <div class="image-zoom-wrapper">
 
                                 <img src="./assets/images/Maruful Islam.jpeg" alt="">
-                                <h4 >Maruful Islam</h4>
+                                <h4>Maruful Islam</h4>
                                 <p class="mb-0">Research Trainee</p>
 
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Rakib.jpg" alt="">
+                                <h4>Md. Rakib Hasan</h4>
+                                <p class="mb-0">Research Trainee</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Tushar.jpg" alt="">
+                                <h4>MD Tanbin Tushar</h4>
+                                <p class="mb-0">Research Trainee</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Zahid.jpg" alt="">
+                                <h4>Zahid Hasan Anik</h4>
+                                <p class="mb-0">Research Trainee</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+
+                                <img src="./assets/images/Fahim3.jpg" alt="">
+                                <h4>Md. Fahim Hossain</h4>
+                                <p class="mb-0">Research Trainee</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <hr class="thin-line">
+
     <!--CONTACT-->
     <section class="section-padding bg-dark" id="contact">
         <div class="container">
@@ -291,7 +650,7 @@
             </div>
             <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
                 <div class="col-lg-8">
-                    <form action="https://formsubmit.co/official@learnifyresearchlab.com" method="POST" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                    <form action="https://formsubmit.co/hr.learnify@gmail.com" method="POST" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
                         <div class="form-group col-lg-6">
                             <input type="text" name="eFirstName" class="form-control" placeholder="Enter first name"required>
                         </div>
@@ -369,17 +728,19 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row g-4 justify-content-between">
-                    <div class="col-auto">
-                        <p class="mb-0">© Copyright Learnify Research Lab. All Rights Reserved</p>
-                    </div>
-                    <div class="col-auto">
-                        <p class="mb-0">Design and developed by <a href="https://www.linkedin.com/in/istiaquehossainleon/">Istiaque Hossain Leon</a></p>
+                <div class="row g-4">
+                    <div class="col-12 d-flex justify-content-between">
+                        <div class="col-auto">
+                            <p class="mb-0">© Copyright Learnify Research Lab. All Rights Reserved</p>
+                        </div>
+                        <div class="col-auto">
+                            <p class="mb-0">Version 2.0</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+        
 </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
