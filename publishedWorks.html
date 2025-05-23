@@ -89,12 +89,7 @@
         </div>
     </nav>
     
-    <!--HERO-->
-    
-    <!--ABOUT-->
-    
-    <!--RESEARCHUNITS-->
-    
+
     <!--POLICIES-->
     <style>
         .published-works-section {
@@ -225,6 +220,205 @@
             margin-bottom: 0; /* Keep spacing consistent at the bottom */
         }
     </style>
+
+       <style>
+      /* Add hover effect for navbar links */
+      .navbar-nav .nav-link {
+          position: relative;
+          color: #000; /* Default text color */
+          text-decoration: none;
+      }
+
+      .navbar-nav .nav-link:hover::after {
+          content: '';
+          position: absolute;
+          bottom: -3px; /* Position the underline just below the text */
+          left: 0;
+          width: 100%;
+          height: 2px; /* Thickness of the underline */
+          background-color: #09303e; /* Customize the underline color */
+          transition: width 0.3s ease; /* Smooth animation */
+      }
+
+      .navbar-nav .nav-link:hover {
+          color: #61808f; /* Optional: Change text color on hover */
+      }
+
+      .navbar-nav .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #09303e; /* Underline color */
+          transition: width 0.3s ease; /* Animation for underline */
+      }
+
+      /* Style for digital notice marquee */
+      .notice-container {
+          background-color: #09303e; /* Background color */
+          color: white; /* Text color */
+          font-size: 18px; /* Font size */
+          padding: 10px 0; /* Padding for the container */
+          overflow: hidden;
+          position: relative;
+      }
+
+      .notice {
+          white-space: nowrap;
+          display: inline-block;
+          animation: marquee 15s linear infinite; /* Animation for continuous scrolling */
+      }
+
+      @keyframes marquee {
+          from {
+              transform: translateX(100%);
+          }
+          to {
+              transform: translateX(-100%);
+          }
+      }
+
+      .notice span {
+          font-weight: bold; /* Highlight important text */
+          color: #FFD700; /* Gold color for highlights */
+      }
+
+      /* Page loader styling */
+      .page-loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      .loader {
+          width: 50px;
+          height: 50px;
+          border: 5px solid #f3f3f3;
+          border-top: 5px solid #09303e;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      /* Back to top button */
+      .back-to-top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          background-color: #09303e;
+          color: #fff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+          z-index: 999;
+      }
+
+      .back-to-top.active {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      /* Footer styling */
+      footer {
+          color: #fff;
+      }
+
+      footer a {
+          color: #adb5bd;
+      }
+
+      footer a:hover {
+          color: #fff;
+      }
+
+      footer .social-icons i {
+          font-size: 24px;
+          margin-right: 10px;
+          color: #adb5bd;
+      }
+
+      footer .social-icons i:hover {
+          color: #fff;
+      }
+
+      footer .line {
+          width: 60px;
+          height: 2px;
+          background-color: #fff;
+      }
+
+      /* Internship form styling */
+      .theme-shadow {
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+      }
+
+      .btn-brand {
+          background-color: #09303e;
+          color: #fff;
+          border: none;
+          padding: 12px 24px;
+          font-weight: 500;
+          transition: all 0.3s;
+      }
+
+      .btn-brand:hover {
+          background-color: #134857;
+          color: #fff;
+      }
+
+      .section-title h1 {
+          position: relative;
+          margin-bottom: 40px;
+      }
+
+      .section-title h1:after {
+          content: "";
+          width: 80px;
+          height: 3px;
+          background-color: #fff;
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      .section-padding {
+          padding: 120px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </div>
       
     <section class="published-works-section">
         <div class="container">
@@ -473,7 +667,7 @@
                 <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
                     <div class="team-member">
                         <div class="image-zoom-wrapper">
-                            <img src="./assets/images/Data inbreif.jpg" alt="">
+                            <img src="./assets/images/data in breif.jpg" alt="">
                         </div>
                         <h4>A Comprehensive dental dataset of six classes for deep learning based object detection study</h4>
                         <a href="https://www.sciencedirect.com/science/article/pii/S2352340924009326?via%3Dihub" target="_blank">10.1016/j.dib.2024.110970</a>
@@ -554,72 +748,112 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./assets/js/smtpfile.js"></script>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark">
-        <div class="footer-top">
+<!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="footer-top pb-4">
             <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-3 col-sm-6">
-                        <a href="#"><img src="./assets/images/logo.png" alt=""></a>
-                        <div class="line"></div>
-                        <p>DISCOVERING TOMORROWS KNOWLEDGE TODAY</p>
-                        <div class="social-icons">
-                            <a href="https://chat.whatsapp.com/GNeJsiPtaib8xkvGoypOUR"><i class="ri-whatsapp-fill"></i></a>
-                            <a href="https://www.facebook.com/learnifyresearchlab/"><i class="ri-facebook-fill"></i></a>
-                            <a href="https://www.linkedin.com/company/learnify-research-lab"><i class="ri-linkedin-fill"></i></a>
-                            <a href="mailto:official@learnifyresearchlab.com"><i class="ri-mail-fill"></i></a>
+                <div class="row gy-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <a href="./index.html" class="d-inline-block mb-3">
+                            <img src="./assets/images/logo.png" alt="Learnify Logo">
+                        </a>
+                        <div class="line mb-3"></div>
+                        <p class="mb-4">DISCOVERING TOMORROW'S KNOWLEDGE TODAY</p>
+                        <div class="social-icons d-flex gap-3">
+                            <a href="https://wa.me/qr/32ZKPMVIYSQNK1" class="text-decoration-none"><i class="ri-whatsapp-fill"></i></a>
+                            <a href="https://www.facebook.com/learnifyresearchlab/" class="text-decoration-none"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://www.linkedin.com/company/learnify-research-lab" class="text-decoration-none"><i class="ri-linkedin-fill"></i></a>
+                            <a href="mailto:official@learnifyresearchlab.com" class="text-decoration-none"><i class="ri-mail-fill"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">Discover Us</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Published Works</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Research Units</a></li>
-                            <li><a href="#">Educational Programs</a></li>
+                    
+                    <!-- Discover Us -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="mb-3 text-white">Discover Us</h5>
+                        <div class="line mb-3"></div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
+                            <li class="mb-2"><a href="./publishedWorks.html" class="text-decoration-none">Published Works</a></li>
+                            <li class="mb-2"><a href="./index.html#projects" class="text-decoration-none">Projects</a></li>
+                            <li class="mb-2"><a href="./index.html#services" class="text-decoration-none">Research Units</a></li>
+                            <li class="mb-2"><a href="./index.html#programs" class="text-decoration-none">Educational Programs</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">Join Us</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="#">Internship</a></li>
+                    
+                    <!-- Join Us -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5 class="mb-3 text-white">Join Us</h5>
+                        <div class="line mb-3"></div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a href="./internship.html" class="text-decoration-none">Internship</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">CONTACT</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li>Dhaka, Bangladesh</li>
-                            <li>+880 17 2215 2382</li>
-                            <!-- <li>official@learnifyresearchlab.com</li> -->
-                            <li>hr.learnify@gmail.com</li>
-                            <li>www.learnifyresearchlab.com</li>
+                    
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="mb-3 text-white">CONTACT</h5>
+                        <div class="line mb-3"></div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Dhaka, Bangladesh</li>
+                            <li class="mb-2">+880 17 2215 2382</li>
+                            <li class="mb-2">hr.learnify@gmail.com</li>
+                            <li class="mb-2">www.learnifyresearchlab.com</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        
+        <div class="footer-bottom pt-4 border-top border-secondary">
             <div class="container">
-                <div class="row g-4">
-                    <div class="col-12 d-flex justify-content-between">
-                        <div class="col-auto">
-                            <p class="mb-0">© Copyright Learnify Research Lab. All Rights Reserved</p>
+                <div class="row">
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+                        <div>
+                            <p class="mb-2 mb-md-0">© Copyright Learnify Research Lab. All Rights Reserved</p>
                         </div>
-                        <div class="col-auto">
-                            <p class="mb-0"> 01.17.24.V2</p>
+                        <div>
+                            <p class="mb-0">05.20.25.V3</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Page loader
+        window.addEventListener('load', function() {
+            document.querySelector('.page-loader').style.opacity = '0';
+            document.querySelector('.page-loader').style.visibility = 'hidden';
+        });
+        
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
   </body>
 </html>
