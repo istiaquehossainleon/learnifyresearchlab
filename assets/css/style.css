@@ -80,7 +80,7 @@ img {
  color: white;
 }
 /* HERO */
-#hero {  
+#home {  
  position: relative;
  overflow: hidden;
  padding-top: var(--navbar-height, 70px);
@@ -90,7 +90,7 @@ img {
  justify-content: center;
 }
 /* HERO PAGE */
-#hero .hero-page {
+#home .home-page {
  position: relative;
  width: 100%;
  height: 100%;
@@ -231,7 +231,7 @@ footer .line {
  font-family: 'Times New Roman', Times, serif;
  font-size: 10;
 }
-.hero-video-background { /* Added . to hero-video-background */
+.home-video-background { /* Added . to hero-video-background */
  position: absolute;
  top: 0;
  left: 0;
@@ -240,7 +240,7 @@ footer .line {
  overflow: hidden;
  z-index: 0;
 }
-.hero-video-background video {
+.home-video-background video {
  position: absolute;
  top: 0;
  left: 0;
@@ -249,7 +249,7 @@ footer .line {
  object-fit: cover;
  pointer-events: none;
 }
-#hero .hero-content {
+#home .home-content {
  position: absolute;
  top: 50%;
  left: 50%;
@@ -303,11 +303,11 @@ footer .line {
  }
 }
 
-@media (max-width: 991.98px) { #hero {
+@media (max-width: 991.98px) { #home {
  padding-top: var(--navbar-height, 60px);
  min-height: 70vh;
  }
- #hero .hero-content {
+ #home .home-content {
  padding: 15px;
  }
  #recent-updates .card {
@@ -316,12 +316,12 @@ footer .line {
 }
 /* Mobile adjustments for Research Units */
 @media (max-width: 767.98px) {
-  #hero .hero-content h1 {
+  #home .home-content h1 {
     font-size: 2rem;
   }
 
-  #hero .hero-content h3,
-  #hero .hero-content h1#text3 {
+  #home .home-content h3,
+  #home .home-content h1#text3 {
     font-size: 1.2rem;
     line-height: 1.4;
     margin-top: 10px;
@@ -332,4 +332,3 @@ footer .line {
     text-align: center;
   }
 }
-
