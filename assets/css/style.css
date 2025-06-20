@@ -237,10 +237,20 @@ footer .line {
  background-color: var(--c-brand);
  color: white;
 }
-#justifiedText {
- text-align: justify;
- line-height: 1.5;
- margin: 0;
+.world-map {
+ transition: all 0.3s ease;
+}
+.world-map:hover {
+ transform: scale(1.02);
+}
+.world-map-svg {
+ max-height: 250px;
+ max-width: 100%;
+ background-color: #0a192f;
+ border-radius: 10px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.world-map-legend text {
  display: flex;
  align-items: center;
  font-weight: normal;
