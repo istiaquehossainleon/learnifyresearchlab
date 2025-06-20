@@ -110,6 +110,12 @@ img {
  margin-left: auto;
  margin-right: auto;
 }
+
+.line-separator {
+    width: 80px;
+    height: 3px;
+    background-color: #355a69;
+}
 /* ICONBOX */
 .iconbox {
  width: 70px;
