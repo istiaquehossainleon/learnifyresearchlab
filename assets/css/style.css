@@ -79,6 +79,16 @@ img {
  border-color: var(--c-brand-light);
  color: white;
 }
+.btn-more {
+ background-color: rgba(0, 0, 0, 0.5);
+ border: 2px solid white;
+ color: white !important;
+}
+.btn-more:hover {
+ background-color: rgba(0, 0, 0, 0.7);
+ border-color: white;
+ color: white !important;
+}
 /* HERO */
 #home {  
  position: relative;
