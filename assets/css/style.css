@@ -357,4 +357,7 @@ footer .line {
     margin-bottom: 20px;
     text-align: center;
   }
+  .home-video-background video {
+    object-position: center center; /* Prioritize the center of the video */
+  }
 }
