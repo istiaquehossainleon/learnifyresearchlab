@@ -1,0 +1,334 @@
+/* FONTS */
+@import url(general-sans.css);
+/* VARIABLES */
+:root {
+ --c-dark: #212529;
+ --c-brand: #1E4554;
+ --c-brand-light: #0A3542;
+ --c-brand-rgb: 10, 53, 66;
+ --c-body: #727272;
+ --font-base: 'GeneralSans', sans-serif;
+ --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+ --transition: all 0.5s ease;
+}
+html { scroll-behavior: smooth; }
+/* RESET & HELPERS */
+body {
+ font-family: var(--font-base);
+ line-height: 1.7;
+ color: var(--c-dark); /* Increased contrast */
+ font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+ font-weight: 600;
+ color: var(--c-dark);
+}
+a {
+ text-decoration: none;
+ color: var(--c-brand);
+ transition: var(--transition);
+}
+a:hover {
+ color: var(--c-brand-light);
+}
+img {
+ max-width: 100%;
+ height: auto;
+}
+.section-padding {
+ padding: 2rem 0;
+}
+/* Alternating background colors for specific sections */
+#about,
+#founders,
+#team {
+ background-color: #f8f9fa;
+}
+#recent-updates,
+#services {
+ background-color: #e9ecef;
+}
+/* NAVBAR */
+.navbar {
+ box-shadow: var(--box-shadow);
+ position: sticky;
+ top: 0;
+}
+.navbar-nav .nav-link {
+ color: var(--c-dark);
+}
+.navbar-nav .nav-link.active {
+ color: var(--c-brand);
+}
+/* BTN */
+.btn {
+ font-weight: 600;
+ font-size: 0.875rem;
+ text-transform: uppercase;
+ border-radius: 0;
+ padding: 10px 24px;
+}
+.btn-brand {
+ background-color: var(--c-brand);
+ border-color: var(--c-brand);
+ color: white;
+}
+.btn-brand:hover {
+ background-color: var(--c-brand-light);
+ border-color: var(--c-brand-light);
+ color: white;
+}
+/* HERO */
+#home {  
+ position: relative;
+ padding-top: var(--navbar-height, 70px);
+ min-height: 100vh;
+ align-items: center;
+ justify-content: center;
+}
+/* HERO PAGE */
+#home .home-page {
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+/* SECTION TITLE */
+.section-title {
+ margin-bottom: 60px;
+}
+.section-title .line {
+ width: 60px;
+ height: 40px;
+ background-color: var(--c-brand);
+ margin: 16px auto 24px auto;
+}
+.section-title p {
+ max-width: 500px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.line-separator {
+    width: 80px;
+    height: 3px;
+    background-color: #355a69;
+}
+/* ICONBOX */
+.iconbox {
+ width: 70px;
+ height: 70px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ background: rgba(var(--c-brand-rgb), 0.08);
+ color: var(--c-brand);
+ font-size: 34px;
+ flex: none;
+}
+/* SERVICE */
+.service {
+ position: relative;
+ overflow: hidden;
+ z-index: 2;
+}
+.service::after {
+ content: "";
+ width: 40px;
+ height: 40px;
+ background: rgba(var(--c-brand-rgb), 0.2);
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ transition: var(--transition);
+}
+.service:hover::after {
+ width: 100%;
+ height: 100%;
+ background: var(--c-brand);
+ z-index: -1;
+}
+.service:hover h5,
+.service:hover p,
+.service:hover .iconbox
+.service:hover .iconbox {
+ background-color: rgba(255,255,255,0.2);
+ color: white;
+}
+/* TEAM */
+.team-member-content {
+ background-color: var(--c-brand);
+ position: absolute;
+ bottom: -24px;
+ left: 50%;
+ width: calc(100% - 50px);
+ transform: translateX(-50%);
+ padding: 24px;
+ transition: var(--transition);
+ opacity: 0;
+}
+.team-member:hover .team-member-content {
+ opacity: 1;
+ bottom: 24px;
+}
+/* CONTACT */
+#contact {
+ position: relative;
+ z-index: 2;
+}
+/* Removed the #contact::after rule */
+#contact .form-control {
+ border-radius: 0;
+}
+#contact .form-control:focus {
+ box-shadow: none;
+ border-color: var(--c-brand);
+}
+/* FOOTER */
+footer {
+ padding-top: 1rem;
+}
+.footer-top {
+ padding-bottom: 10px;
+ border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-bottom {
+ padding-top: 2.5rem;
+ padding-bottom: 2.5rem;
+}
+footer li,
+footer p,
+footer a {
+ color: rgba(255,255,255,0.7);
+}
+footer ul {
+ list-style: none;
+ padding: 0;
+}
+footer .line {
+ width: 40px;
+ height: 4px;
+ background-color: var(--c-brand);
+ margin-top: 12px;
+ margin-bottom: 24px;
+}
+.social-icons a {
+ width: 40px;
+ height: 40px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ background-color: rgba(255,255,255,0.1);
+ border-radius: 100px;
+}
+.social-icons a:hover {
+ background-color: var(--c-brand);
+ color: white;
+}
+#justifiedText {
+ text-align: justify;
+ line-height: 1.5;
+ margin: 0;
+ display: flex;
+ align-items: center;
+ font-weight: normal;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: 10;
+}
+.home-video-background { /* Added . to hero-video-background */
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ z-index: 0;
+}
+.home-video-background video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ pointer-events: none;
+}
+#home .home-content {
+ z-index: 1;
+ padding: 20px;
+ color: white;
+}
+#justifiedP {
+ color: #212529;
+}
+#justifiedH {
+ color: #1E4554;
+ border-bottom: 2px solid #1E4554;
+ padding-bottom: 5px;
+ margin-bottom: 20px;
+}
+/* ABOUT */
+#about {
+ padding-top: 40px;
+ padding-bottom: 40px;
+}
+
+/* Desktop specific adjustments */
+@media (min-width: 992px) {
+  #about .about-container,
+ #recent-updates .container,
+ #services .container {
+ max-width: 1200px; /* Limit the width of content */
+ margin: 0 auto; /* Center the limited content */
+  }
+}
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+ .section-padding {
+ padding: 6rem 0;
+ }
+ body {
+ font-size: 1.1rem;
+ }
+ .btn {
+ font-size: 1rem;
+ }
+ .iconbox {
+ font-size: 40px;
+ }
+ .about-box-container .col-lg-6,
+ #recent-updates .col-lg-4,
+ #services .col-lg-4.col-sm-6 {
+ margin-bottom: 0; /* Remove bottom margin on desktop */
+ }
+}
+
+@media (max-width: 991.98px) { #home {
+ padding-top: var(--navbar-height, 60px);
+ min-height: 70vh;
+ }
+ #home .home-content {
+ padding: 15px;
+ }
+ #recent-updates .card {
+ margin-bottom: 20px;
+ }
+}
+/* Mobile adjustments for Research Units */
+@media (max-width: 767.98px) {
+  #home .home-content h1 {
+    font-size: 2rem;
+  }
+
+  #home .home-content h3,
+  #home .home-content h1#text3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-top: 10px;
+  }
+
+  .team-member {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
